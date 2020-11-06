@@ -1,4 +1,3 @@
-
 /* global checkUserLoggedIn */
 
 function removeExistingCSRF() {
@@ -38,6 +37,10 @@ function fetchBaseData() {
       if (json.broadcast) {
         document.body.dataset.broadcast = json.broadcast;
       }
+
+      // Assigning Creator Onboarding Completed
+      document.body.dataset.creatorOnboardingCompleted =
+        json.creator_onboarding_completed;
 
       // Assigning User
       if (checkUserLoggedIn()) {
